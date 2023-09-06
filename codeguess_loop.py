@@ -226,7 +226,7 @@ print()
 
 webh = {"username":sys.argv[1],"idx":idxvalue}
 
-url = "https://hooks.slack.com/workflows/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"
+url = "https://hooks.slack.com/workflows/blahblah"
 jsend = json.dumps(webh)
 response = s.post(url, data = jsend)
 
