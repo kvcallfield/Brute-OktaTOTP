@@ -10,6 +10,6 @@ Valid Okta passwords should be obtainable via a tool like Okta-Password-Sprayer.
 
 codeguess.py - a POC that guesses 3 incorrect TOTP codes, then the correct one.  It then sends the predetermined valid user password to complete 2fa, and gives you an 'idx' cookie to paste into your Okta session for initial access.  Update: includes a Slack webhook with the cookie.
 
-codeguess_loop.py - the actual tool that guesses until a valid code is found.  Handles timeouts.  
+codeguess_loop.py - the actual tool that guesses until a valid code is found.  Handles timeouts.  Includes the bells and whistles described above for codeguess.py.
 
-codeguess_loop_slower.py - attempts to avoid lockouts and IP blocks by throttling the attempts
+codeguess_loop_slower.py - attempts to avoid lockouts and IP blocks by throttling the attempts.  Includes the bells and whistles described above for codeguess.py.
